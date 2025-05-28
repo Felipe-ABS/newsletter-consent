@@ -1,0 +1,54 @@
+{
+  "consents": [
+    {
+      "id": 0,
+      "nome": "Felipe Silva",
+      "email": "felipe@silva.com",
+      "consented": [
+        "Receive newslatter",
+        "Be shown targeted ads"
+      ]
+    },
+    {
+      "id": 1,
+      "nome": "Jamili Moreno",
+      "email": "jamili@moreno.com",
+      "consented": [
+        "Receive newslatter",
+        "Be shown targeted ads"
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "Leonardo Silva",
+      "email": "Leonardo@silva.com",
+      "consented": [
+        "Receive newslatter"
+      ]
+    },
+    {
+      "id": 4,
+      "nome": "Felipe Antônio",
+      "email": "felipe@antonio.com",
+      "consented": [
+        "I Agree"
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "Felipe Antônio",
+      "email": "felipe@antonio.com",
+      "consented": [
+        "I Agree"
+      ]
+    },
+    {
+      "id": 4,
+      "nome": "Felipe Antônio",
+      "email": "felipe@antonio.com",
+      "consented": [
+        "Receive newsletter"
+      ]
+    }
+  ]
+}
