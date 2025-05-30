@@ -1,11 +1,30 @@
 <div class="client">
-    <form action="">
-        <input type="text" placeholder="Name"><input type="text" placeholder="Email Address">
+    <form [formGroup]="consentForm">
+        <input type="text" placeholder="Name" formControlName="nome">
+        <input type="text" placeholder="Email Address" formControlName="email">
         <span>I agree to</span>
         <div class="check-options">
-            <input type="checkbox"> Teste 1
-            <input type="checkbox"> Teste 2
-            <input type="checkbox"> Teste 3
+            <input
+                type="checkbox"
+                (change)="teste($event)"
+                name="receive"
+                value="{{consentEnum.Receive}}"
+            >
+            <label for="receive">{{consentEnum.Receive}}</label>
+            <input
+                type="checkbox"
+                (change)="teste($event)"
+                name="showAds"
+                value="{{consentEnum.ShowAds}}"
+            >
+            <label for="receive">{{consentEnum.ShowAds}}</label>
+            <input
+                type="checkbox"
+                (change)="teste($event)"
+                name="contribute"
+                value="{{consentEnum.Contribute}}"
+            >
+            <label for="receive">{{consentEnum.Contribute}}</label>
         </div>
         <button type="button" (click)="getUser()">Give Consent</button>
     </form>

@@ -7,7 +7,7 @@ import { User } from '../models/user';
   providedIn: 'root'
 })
 
-export class GiveConsentService {
+export class ConsentService {
   private baseUrl = "http://localhost:3000/consents";
   constructor(private http: HttpClient) {}
 
@@ -15,7 +15,7 @@ export class GiveConsentService {
     return this.http.get<User>(this.baseUrl);
   }
   
-  createUser(userData: User): Observable<User> {
-    return this.http.post<User>(this.baseUrl, userData);
+  createUser(userData: any): Observable<any> {
+    return this.http.post(this.baseUrl, userData);
   }
 }
