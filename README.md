@@ -27,6 +27,10 @@ npm install -g @angular/cli
     ```bash
     npm install
     ```
+3. Instale o json-server que usaremos como api fake.
+   ```bash
+   npm install json-server
+   ```
 
 ## Iniciando a API fake com Json-server
 - Esse projeto utiliza `json-server` para simular uma API Rest, permitindo realizar requisições HTTP. Na raiz do projeto se encontra a pasta `db`, onde se encontrará o arquivo que contém os dados mockados, e é onde será armazenado os dados inseridos durante o uso da aplicação.
