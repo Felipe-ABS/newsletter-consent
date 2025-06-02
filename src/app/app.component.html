@@ -1,19 +1,19 @@
 <header>
-  <div class="title">
-    <h1>Newsletter Consent</h1>
+  <div class="topbar">
+    <span class="logo">Newsletter Consent</span>
   </div>
 </header>
 <main>
-  <nav class="side-bar">
-    <a href="">Give Consent</a>
-    <a href="">Collected Consent</a>
-  </nav>
-  <div class="main-content">
+  <div class="sidenav">
+    <a routerLink="/give-consent">Give Consent</a>
+    <a routerLink="/consents">Collected Consent</a>
+  </div>
+  <div class="content">
     <router-outlet></router-outlet>
-    <app-give-consent></app-give-consent>
-    <app-collected-consents></app-collected-consents>
   </div>
 </main>
 <footer>
-
+  <div class="footer">
+    &copy;Talent Academy 2025
+  </div>
 </footer>

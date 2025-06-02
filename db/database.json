@@ -1,7 +1,7 @@
 {
   "consents": [
     {
-      "id": "0",
+      "id": 0,
       "nome": "Felipe Silva",
       "email": "felipe@silva.com",
       "consented": [
@@ -10,7 +10,7 @@
       ]
     },
     {
-      "id": "1",
+      "id": 1,
       "nome": "Jamili Moreno",
       "email": "jamili@moreno.com",
       "consented": [
@@ -19,44 +19,11 @@
       ]
     },
     {
-      "id": "2",
+      "id": 2,
       "nome": "Leonardo Silva",
       "email": "Leonardo@silva.com",
       "consented": [
         "Receive newslatter"
-      ]
-    },
-    {
-      "id": "4",
-      "nome": "Felipe Antônio",
-      "email": "felipe@antonio.com",
-      "consented": [
-        "Receive newsletter"
-      ]
-    },
-    {
-      "id": "4",
-      "nome": "Felipe Antônio",
-      "email": "felipe@antonio.com",
-      "consented": [
-        "Receive newsletter"
-      ]
-    },
-    {
-      "id": "3",
-      "nome": "Felipe Antônio",
-      "email": "felipe@antonio.com",
-      "consented": [
-        "Receive newsletter"
-      ]
-    },
-    {
-      "id": 4,
-      "nome": "teste",
-      "email": "teste@testado.com",
-      "consented": [
-        "Receive newsletter",
-        "Be shown targeted ads"
       ]
     }
   ]

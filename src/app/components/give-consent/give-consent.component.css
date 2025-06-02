@@ -1,0 +1,73 @@
+.consent-form {
+    width: 100%;
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  .consent-form span {
+    text-align: center;
+    font-weight: bold;
+    margin-left: 35%;
+    color: #009879;
+    margin-bottom: 2.5rem;
+  }
+  
+  .consent-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .consent-form input[type="text"],
+  .consent-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .checkbox-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .checkbox-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.7rem;
+    font-weight: 500;
+    color: #444;
+  }
+  
+  .checkbox-item input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: #009879;
+    transform: scale(1.2);
+  }
+  
+  .consent-form button {
+    width: 100%;
+    background-color: #009879;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .consent-form button:hover {
+    background-color: #007c65;
+  }
+  

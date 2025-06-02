@@ -1,30 +1,27 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { ConsentService } from '../../services/consent.service';
 import { User } from '../../models/user';
 import { ConsentsTo } from '../../enum/consents';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-give-consent',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [
+    ReactiveFormsModule,
+    FormsModule,
+    RouterLink
+  ],
   templateUrl: './give-consent.component.html',
   styleUrl: './give-consent.component.css'
 })
 export class GiveConsentComponent {
   consentEnum = ConsentsTo;
+  isChecked: boolean = false;
   agreeTo: Array<string> = [];
 
   constructor(private giveService: ConsentService){}
-
-  // private newUser: User = {
-  //   id: Math.floor(Math.random() * 5) + 1,
-  //   nome: "Felipe Antônio",
-  //   email: "felipe@antonio.com",
-  //   consented: [
-  //     ConsentsTo.Receive
-  //   ]
-  // };
 
   consentForm = new FormGroup<User>({
     id: new FormControl(Math.floor(Math.random() * 5) + 1),
@@ -33,16 +30,22 @@ export class GiveConsentComponent {
     consented: new FormControl(this.agreeTo)
   });
 
-  getUser(): void {
-    this.giveService.createUser(this.consentForm.value).subscribe((response) => {
-      console.log(response);
-    });
+  submitConsent(): void {
+    this.giveService.createUserConsent(this.consentForm.value).subscribe();
   }
   
   teste(e: any): void {
-    if(e.target.checked) {
-      this.agreeTo.push(e.target.defaultValue);
+    const checkbox = e.target as HTMLInputElement;
+    const value = checkbox.defaultValue;
+
+    if(checkbox.checked && !this.agreeTo.includes(value)) {
+      this.agreeTo.push(value);
+      this.isChecked = true;
+    } else {
+      this.agreeTo = this.agreeTo.filter(
+        item => item !== value
+      )
+      this.isChecked = false;
     }
-    console.log(this.consentForm.value);
   }
 }

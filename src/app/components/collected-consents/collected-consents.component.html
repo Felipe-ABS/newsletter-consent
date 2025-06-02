@@ -1,16 +1,29 @@
-<div class="consent-table">
-    <table>
-        <thead>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Consent Given for</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Bojack Horseman</td>
-                <td>bojack&#64;horseman.com</td>
-                <td>Receive newsletter, Be shown targetted ads</td>
-            </tr>
-        </tbody>
-    </table>
+<div class="consents-table">
+    @if(data().length) {
+        <table class="collected-consents">
+            <thead>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Consent Given for</th>
+            </thead>
+            <tbody>
+                @for (consent of paginatedUsers(); track $index) {
+                    <tr>
+                        <td>{{consent.nome}}</td>
+                        <td>{{consent.email}}</td>
+                        <td>{{consent.consented}}</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <nav class="pagination">
+            <button (click)="paginaAnterior()" [disabled]="currentPage() === 1"><i class="fa-solid fa-arrow-left"></i></button>
+            <span>Page {{currentPage()}} of {{totalPages()}}</span>
+            <button (click)="proximaPagina()" [disabled]="currentPage() === totalPages()"><i class="fa-solid fa-arrow-right"></i></button>
+        </nav>
+    } @else {
+        <div class="noData">
+            <span>Unable to receive Consent Data</span>
+        </div>
+    }
 </div>

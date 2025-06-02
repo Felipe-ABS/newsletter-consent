@@ -1,0 +1,66 @@
+.consents-table {
+    min-width: 200px;
+    border-radius: 10px;
+}
+
+.collected-consents {
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.collected-consents thead th {
+    background-color: #009879;
+    color: #ffffff;
+    /* text-align: left; */
+}
+
+.collected-consents th,
+.collected-consents td {
+    padding: 12px 15px;
+}
+
+.collected-consents tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.collected-consents tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.collected-consents tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+/* Paginação */
+.pagination {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.pagination span {
+    font-size: 100%;
+    margin: 0;
+    padding: .5em;
+}
+
+.pagination > button {
+    border: none;
+    font-size: 100%;
+}
+
+.pagination button {
+    color: #777;
+    font-size: 100%;
+    padding: .5em;
+}
+
+.pagination button:focus,
+.pagination button:hover {
+    background-color: #006e58;
+    color: #f3f3f3;
+    border-radius: 10px;
+}

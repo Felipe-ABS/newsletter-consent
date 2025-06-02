@@ -1,0 +1,72 @@
+.topbar {
+  background-color: #009879;
+  color: white;
+  padding: 10px 10px;
+  align-items: center;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.topbar .logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Side Navbar */
+.sidenav {
+  height: 100%;
+  width: 250;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #f3f3f3;
+  overflow-x: hidden;
+  padding-top: 60px;
+  z-index: 0;
+}
+
+.sidenav a {
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block;
+}
+
+.sidenav a:hover {
+  background-color: #006e58;
+  color: #f3f3f3;
+  border-radius: 10px;
+}
+
+.sidenav .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* Main Content */
+.content {
+  margin-top: 100px;
+  margin-left: 250px;
+  padding: 20px;
+  padding-right: 420px;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background-color: #009879;
+  color: white;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  z-index: 1;
+}
