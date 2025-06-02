@@ -34,7 +34,7 @@ export class GiveConsentComponent {
     this.giveService.createUserConsent(this.consentForm.value).subscribe();
   }
   
-  teste(e: any): void {
+  checkboxValue(e: any): void {
     const checkbox = e.target as HTMLInputElement;
     const value = checkbox.defaultValue;
 
